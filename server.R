@@ -19,11 +19,13 @@ shinyServer(function(input, output) {
 
   output$plot1 <- renderPlot({
       plot(Navacerrada1()$Date,Navacerrada1()$TmA, type = "h",main = "Monthly Temperature Anomaly", xlab = "Year", 
-           ylab = "Temperature Anomaly (ºC)")
+           ylab = "Temperature Anomaly (ºC)", col = "red")
+      abline(a=0,b = 0, col = "grey70")
   })
       
   output$plot2 <- renderPlot({
       plot(Navacerrada1()$Date,Navacerrada1()$PmA, type = "h",xlab = "Year",
-           main = "Monthly Precipitation Anomaly" , ylab = "Precipitation Anomaly (mm)")
+           main = "Monthly Precipitation Anomaly" , ylab = "Precipitation Anomaly (mm)", col ="blue1")
+      abline(a=0,b = 0, col = "grey70")
   })
       })

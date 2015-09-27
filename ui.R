@@ -26,12 +26,22 @@ shinyUI(fluidPage(
     br(),
     br(),
     
-    strong("Interpretation of the Anomalies"),
+    strong("Interpretation of the Anomalies:"),
+    
+    br(),
+    br(),
+    
     p("The term anomaly means a departure from a reference value or long-term
-      average (mean temperature and precipitation for the period 1947-1976)"),
-    p("A positive anomaly indicates that the observed temperature (precipitation) 
+      average (monthly mean temperature and precipitation for the period 1947-1976)"),
+    
+    br(),
+    
+    p("A positive anomaly (>0)indicates that the observed temperature (precipitation) 
       was warmer (wetter) than the reference value."),
-    p("A negative anomaly indicates that the observed temperature (precipitation)
+    
+    br(),
+    
+    p("A negative anomaly (<0) indicates that the observed temperature (precipitation)
       was cooler (dryer) than the reference value.")
     
     #img(src = "Navacerrada.png")
