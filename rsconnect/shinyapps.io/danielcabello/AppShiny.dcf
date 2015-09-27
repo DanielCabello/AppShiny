@@ -1,0 +1,9 @@
+name: AppShiny
+account: danielcabello
+server: shinyapps.io
+appId: 62161
+bundleId: 275379
+url: https://danielcabello.shinyapps.io/AppShiny
+when: 1443378166.9619
+asMultiple: FALSE
+asStatic: FALSE

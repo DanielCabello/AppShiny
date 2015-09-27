@@ -1,22 +1,25 @@
 library(shiny)
 
 shinyUI(fluidPage(
-  titlePanel("Monthly Average Temperature and Precipitation anomalies in Guadarrama Mountain (Madrid, Spain)"),
+  titlePanel("Monthly Average Temperature and Precipitation Anomalies in Guadarrama Mountain (Madrid, Spain)"),
   br(),
   br(),
   
   sidebarLayout(
     
     sidebarPanel(
+        
+        p(h5(em(div("The graphs show the anomalies of temperature and precipitation for 
+          the selected month in the range of years indicated.",style = "color:red")))),
     
         br(), 
         
-    sliderInput('year','Select range of years', min = 1947, 
+    sliderInput('year','Select a range of years:', min = 1947, 
                              max = 2010, value = c(1947, 2010), step = 1),
     
      br(),
     
-     selectInput("Month1", label = "Select Month:", 
+     selectInput("Month1", label = "Select a Month:", 
                 choices = list("January" = 1, "February" = 2,
                                "March" = 3,  "April" = 4,
                                "May" = 5,  "June" = 6,
@@ -24,7 +27,7 @@ shinyUI(fluidPage(
                                "September" = 9,  "October" = 10,
                                "November" = 11,  "December" =12 ), selected = 1),
     br(),
-    br(),
+
     
     strong("Interpretation of the Anomalies:"),
     
@@ -36,12 +39,12 @@ shinyUI(fluidPage(
     
     br(),
     
-    p("A positive anomaly (>0)indicates that the observed temperature (precipitation) 
+    p("  - A positive anomaly (>0)indicates that the observed temperature (precipitation) 
       was warmer (wetter) than the reference value."),
     
     br(),
     
-    p("A negative anomaly (<0) indicates that the observed temperature (precipitation)
+    p("  - A negative anomaly (<0) indicates that the observed temperature (precipitation)
       was cooler (dryer) than the reference value.")
     
     #img(src = "Navacerrada.png")
